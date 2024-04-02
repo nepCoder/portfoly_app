@@ -145,14 +145,12 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* <!-- Footer Section --> */}
       <footer className="bg-gray-900 w-screen text-white py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center">© 2023 nepcoder. All rights reserved.</p>
         </div>
       </footer>
-
     </main>
   );
 }
