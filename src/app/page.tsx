@@ -19,7 +19,7 @@ export default function Home() {
       </div>
 
 
-      <div id="navbar-links" className="hidden fixed z-50 top-14 left-1 right-1  bg-gray-800 text-white md:hidden flex flex-col">
+      <div id="navbar-links" className="hidden fixed z-50 top-14 left-1 right-1  bg-gray-800 text-white md:hidden flex-col">
         <a href="#home" className="border-y-2 hover:bg-gray-300 border-gray-2 nav-link active mr-10 pl-3 py-2 hover:text-orange-300 w-full ">Home</a>
         <a href="#blogs" className="border-b-2 hover:bg-gray-300 border-gray-2 nav-link mr-10 pl-3 py-2  hover:text-orange-300 w-full">Blogs</a>
         <a href="#projects" className="border-b-2 hover:bg-gray-300 border-gray-2 nav-link mr-10 pl-3 py-2 hover:text-orange-300 w-full">Projects</a>
