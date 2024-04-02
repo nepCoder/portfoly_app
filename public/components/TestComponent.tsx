@@ -6,7 +6,7 @@ export default function TextComponent() {
     useEffect(() => {
         fetch('/api/auth')
             .then(response => response.json())
-            .then(data => setData(data.message))
+            .then(res => setData(res.data.content))
     }, [])
 
     return <div>{data}</div>
