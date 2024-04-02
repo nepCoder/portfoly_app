@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
             <script src="https://cdn.tailwindcss.com"></script>
-            <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+            <link rel="icon" href="../public/images/favicon.png" type="image/x-icon" />
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
               {/* <style>
                 .nav {
