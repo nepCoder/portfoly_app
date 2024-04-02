@@ -82,7 +82,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-center">
               <Image src="https://randomuser.me/api/portraits/men/86.jpg" height={64} width={64} alt="Your Photo" className="w-64 h-64 rounded-full mb-6 md:mb-0" />
               <div className="md:ml-8">
-                <p className="text-xl text-gray-700 mb-4">Hello! I'm Bikash Khanal,</p>
+                <p className="text-xl text-gray-700 mb-4">Hello! I am Bikash Khanal,</p>
                 <p className="text-lg text-justify text-gray-600">I am a passionate and experienced full-stack software developer with expertise in <strong>.NET</strong>, <strong>Angular</strong>, and <strong>MS-SQL</strong>. I love creating efficient, scalable, and user-friendly applications. With an experience of developing ERP software solutions for Staffing Companies and strong academic background in Computer Science and Information Technology, I strive to deliver innovative solutions that meet the needs of clients and end-users.</p>
               </div>
             </div>

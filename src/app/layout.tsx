@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-            <script src="https://cdn.tailwindcss.com"></script>
+            <Script src="https://cdn.tailwindcss.com" />
             <link rel="icon" href="../public/images/favicon.png" type="image/x-icon" />
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
               {/* <style>
