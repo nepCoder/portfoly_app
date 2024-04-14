@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/public/styles/globals.css";
 import Script from "next/script";
+import OwnersView from "@/public/views/owners-view/OwnersView";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function RootLayout({
       </head>
       <Script src="https://cdn.tailwindcss.com" />
       <body className={inter.className}>
-        {children}
+        <OwnersView children={children} />
       </body>
     </html>
   );

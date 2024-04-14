@@ -1,7 +1,5 @@
 'use client'
-
 import { authenticate } from '@/app/lib/actions'
-import TestComponent from '@/public/components/TestComponent'
 import { useFormState, useFormStatus } from 'react-dom'
 
 export default function Page() {
@@ -15,8 +13,6 @@ export default function Page() {
       <div>{errorMessage && <p>{errorMessage}</p>}</div>
       <LoginButton />
     </form>
-
-    <TestComponent />
   </>
     
   )

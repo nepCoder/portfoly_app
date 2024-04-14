@@ -5,7 +5,8 @@ const prisma = new PrismaClient()
 export async function GET() {
     let data = {};
     try {
-       data = {data:'this is test data'}
+        const post = await prisma.posts.findMany();
+        data = { data: post };
     } catch (e) {
         data = { error: "An unexpected error occurred!" };
     } finally {
