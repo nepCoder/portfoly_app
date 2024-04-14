@@ -70,7 +70,7 @@ const NotificationPanel = () => {
     }, [notifications])
 
     return (
-        <Box sx={{ flexGrow: 0 }}>
+        <Box sx={{ marginRight:2}}>
             <Tooltip title="Notifications">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     {notificationCount > 0 ? <Badge badgeContent={ notificationCount} color="secondary">

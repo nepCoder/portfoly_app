@@ -1,8 +1,10 @@
-import { AppBar, Box, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, IconButton, Toolbar, Tooltip, Typography } from '@mui/material'
 import React from 'react'
 import NotificationPanel from './NotificationPanel'
 import MySearchBar from './SearchBar'
 import UserAvatar from './UserAvatar'
+import { CameraswitchOutlined as PreviewIcon } from '@mui/icons-material'
+import { cursorTo } from 'readline'
 
 const drawerWidth = 240;
 
@@ -21,6 +23,11 @@ const CustomAppBar = () => {
                     Blogs
                 </Typography>
                 <Box sx={{ display: 'flex', flexGrow: '1', justifyContent: 'flex-end', alignItems: 'center' }}>
+                    <IconButton>
+                        <Tooltip title='Switch to Visitor Mode'>
+                            <PreviewIcon style={{ cursor: 'pointer' }} />
+                        </Tooltip>
+                    </IconButton>
                     <NotificationPanel />
                     <MySearchBar />
                     <UserAvatar />

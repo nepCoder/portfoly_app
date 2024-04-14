@@ -3,7 +3,7 @@ import BlogsGrid from '@/public/components/BlogsGrid';
 
 const Blogs = () => {
   return (
-      <BlogsGrid />
+    <BlogsGrid />
   )
 }
 
