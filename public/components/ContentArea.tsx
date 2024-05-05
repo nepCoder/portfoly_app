@@ -1,5 +1,5 @@
 import React from 'react'
-import AppBar from './CustomAppBar'
+import AppBar from './PortfolyAppBar'
 
 const ContentArea = () => {
   return (

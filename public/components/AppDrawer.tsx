@@ -1,31 +1,32 @@
 'use client'
 import { ContrastTwoTone, DashboardTwoTone, Inbox, Mail, NewspaperTwoTone } from '@mui/icons-material';
-import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material'
-import { useRouter } from 'next/navigation';
+import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material';
 import React from 'react'
 import NavButton from './NavButton';
+import { usePathname } from 'next/navigation';
+import BlogForm from '@/app/blogs/forms/BlogForm';
 
 const drawerWidth = 240;
 const navButtons = [
     {
-        buttonName:'Dashboard',
-        path:'/dashboard',
-        icon:<DashboardTwoTone/>
+        buttonName: 'Dashboard',
+        path: '/dashboard',
+        icon: <DashboardTwoTone />
     },
     {
-        buttonName:'Blogs',
-        path:'/blogs',
-        icon:<NewspaperTwoTone/>
+        buttonName: 'Blogs',
+        path: '/blogs',
+        icon: <NewspaperTwoTone />
     },
     {
-        buttonName:'Themes',
-        path:'/themes',
-        icon:<ContrastTwoTone/>
+        buttonName: 'Themes',
+        path: '/themes',
+        icon: <ContrastTwoTone />
     },
 ]
 
 const AppDrawer = () => {
-    const router = useRouter();
+    const currentPath = usePathname();
     return (
         <Drawer
             sx={{
@@ -46,21 +47,10 @@ const AppDrawer = () => {
             </Toolbar>
             <Divider />
             <List>
-                {navButtons.map((nav, index) => ( <NavButton key={index} buttonName={nav.buttonName} path={nav.path} icon={nav.icon} />))}
+                {navButtons.map((nav: any, index: any) => (<NavButton key={index} buttonName={nav.buttonName} path={nav.path} icon={nav.icon} current={currentPath} />))}
             </List>
             <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <Inbox /> : <Mail />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
+            <BlogForm/>
         </Drawer>
     )
 }

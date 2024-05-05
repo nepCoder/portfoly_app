@@ -10,9 +10,6 @@ interface Notification {
     message: string,
     viewed: boolean
 }
-let unseenNotification: Notification[] = []
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const NotificationPanel = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -73,7 +70,7 @@ const NotificationPanel = () => {
         <Box sx={{ marginRight:2}}>
             <Tooltip title="Notifications">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    {notificationCount > 0 ? <Badge badgeContent={ notificationCount} color="secondary">
+                    {notificationCount > 0 ? <Badge badgeContent={ notificationCount} color="warning">
                         <NotificationIcon />
                     </Badge> : <NotificationIcon />}
                 </IconButton>

@@ -1,10 +1,7 @@
 import * as React from 'react';
-import { Fab,Tooltip } from '@mui/material';
-import { Add as AddIcon } from '@mui/icons-material';
 import AppDrawer from '@/public/components/AppDrawer';
-import CustomAppBar from '@/public/components/CustomAppBar';
-
-const drawerWidth = 240;
+import CustomAppBar from '@/public/components/PortfolyAppBar';
+import FloatingAddButton from '@/public/components/FloatingAddButton';
 
 export default function OwnersView({
     children,
@@ -17,11 +14,7 @@ export default function OwnersView({
             <AppDrawer />
             <div className='mt-16 p-3 w-full bg-white'>
                 {children}
-                <Tooltip title='Create New Blog'>
-                    <Fab variant="circular" size="medium" color="success" sx={{ position: 'fixed', right: 20, bottom: 20 }}>
-                        <AddIcon />
-                    </Fab>
-                </Tooltip>
+                <FloatingAddButton/>
             </div>
         </main>
     );

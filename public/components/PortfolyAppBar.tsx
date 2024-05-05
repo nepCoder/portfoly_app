@@ -5,10 +5,12 @@ import MySearchBar from './SearchBar'
 import UserAvatar from './UserAvatar'
 import { CameraswitchOutlined as PreviewIcon } from '@mui/icons-material'
 import { cursorTo } from 'readline'
+import { usePathname } from 'next/navigation'
+import AppBarTitle from './AppBarTitle'
 
 const drawerWidth = 240;
 
-const CustomAppBar = () => {
+const PortfolyAppBar = () => {
     return (
         <AppBar position="fixed" sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}>
             <Toolbar
@@ -20,7 +22,7 @@ const CustomAppBar = () => {
                     component="div"
                     sx={{ display: { xs: 'none', sm: 'block' } }}
                 >
-                    Blogs
+                    <AppBarTitle/>
                 </Typography>
                 <Box sx={{ display: 'flex', flexGrow: '1', justifyContent: 'flex-end', alignItems: 'center' }}>
                     <IconButton>
@@ -37,4 +39,4 @@ const CustomAppBar = () => {
     )
 }
 
-export default CustomAppBar
+export default PortfolyAppBar
